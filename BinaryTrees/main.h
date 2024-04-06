@@ -27,4 +27,6 @@ void binary_tree_print(const binary_tree_t *);
 binary_tree_t *add_node(binary_tree_t *parent, int value);
 binary_tree_t *create_node(int value);
 int count_nodes(binary_tree_t *tree);
+
+void free_tree(binary_tree_t *tree);
 #endif

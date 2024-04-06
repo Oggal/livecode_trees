@@ -23,7 +23,7 @@ void main(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		random = rand() % 500;
+		random = rand() % 100;
 		add_node(tree, random);
 		//binary_tree_print(tree);
 		printf("Comp Count: %i\n", comp_count);
@@ -32,7 +32,7 @@ void main(void)
 		printf("Node count: %i \n", count_nodes(tree));
 
 	}
-
+	free_tree(tree);
 }
 
 
@@ -106,4 +106,14 @@ int count_nodes(binary_tree_t *tree)
 	if (!tree)
 		return (0);
 	return (count_nodes(tree->left) + count_nodes(tree->right) + 1);
+}
+
+
+void free_tree(binary_tree_t *tree)
+{
+	if(!tree)
+		return;
+	free_tree(tree->right);
+	free_tree(tree->left);
+	free(tree);
 }

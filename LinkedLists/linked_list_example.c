@@ -16,7 +16,7 @@ void main(){
 
     for (i = 0; i < 50; i++)
 	{
-		random = rand() % 500;
+		random = rand() % 100;
 		add_node(my_list, random);
 
 		printf("Comp Count: %i\n", comp_count);
