@@ -18,7 +18,9 @@ void main(){
 	{
 		random = rand() % 100;
 		add_node(my_list, random);
-
+        printf("\n");
+        print_list(my_list);
+        printf("\n");
 		printf("Comp Count: %i\n", comp_count);
 		comp_count=0;
 		

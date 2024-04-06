@@ -25,7 +25,7 @@ void main(void)
 	{
 		random = rand() % 100;
 		add_node(tree, random);
-		//binary_tree_print(tree);
+		binary_tree_print(tree);
 		printf("Comp Count: %i\n", comp_count);
 		comp_count=0;
 		
